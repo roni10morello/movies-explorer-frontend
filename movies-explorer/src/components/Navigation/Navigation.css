@@ -1,0 +1,21 @@
+.navigation {
+  padding-bottom: 3.5px;
+}
+.navigation__link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.navigation__link_type_login {
+  border-radius: 3px;
+  color: #000000;
+  background-color: #3ddc84;
+  padding: 8.5px 20px;
+  margin-left: 30px;
+}

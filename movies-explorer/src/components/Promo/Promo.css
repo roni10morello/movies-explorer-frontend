@@ -1,0 +1,35 @@
+.promo {
+  background-color: #073042;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 320px;
+  padding-bottom: 122px;
+  padding-top: 82px;
+}
+
+.promo__title {
+  font-family: "Inter";
+  font-style: medium;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 59px;
+  color: #ffffff;
+  max-width: 730px;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: -2px;
+}
+
+.promo__logo {
+ position: absolute;
+}
+
+
+@media screen and (max-width: 768px) {
+    .promo {
+        padding-bottom: 240px;
+        padding-top: 224px;
+    }
+   }

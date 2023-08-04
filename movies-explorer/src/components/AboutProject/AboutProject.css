@@ -1,0 +1,140 @@
+.about-project {
+  background-color: #202020;
+  padding: 110px 70px;
+}
+
+.about-project__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid rgb(66, 66, 66);
+  padding-top: 70px;
+  padding-bottom: 110px;
+  box-sizing: border-box;
+}
+
+.about-project__container-info {
+  text-align: left;
+  max-width: 550px;
+}
+
+.about-project__container-info:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-project__container-subtitle {
+  font-family: "Inter";
+  font-style: medium;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 26px;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+}
+
+.about-project__container-text {
+  font-family: "Inter";
+  font-style: medium;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.about-project__progress {
+  display: flex;
+  width: 100%;
+}
+
+.about-project__backend {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 20%;
+}
+
+.about-project__frontend {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+}
+
+.about-project__work-time-front {
+  background-color: #303030;
+  padding: 9px 0;
+  margin: 0;
+  width: 100%;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.about-project__work-time-back {
+  background-color: #3ddc84;
+  padding: 8px 0;
+  margin: 0;
+  width: 100%;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  line-height: 20px;
+}
+
+.about-project__work-type {
+  font-family: "Inter";
+  font-style: medium;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8b8b;
+  margin: 0;
+  margin-top: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project {
+    padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__container-info {
+    max-width: 319px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__container-subtitle {
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__container-text {
+    font-size: 12px;
+  line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__container {
+    padding-bottom: 93px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__backend {
+   width: 21.2%;
+  }
+}
+
+
