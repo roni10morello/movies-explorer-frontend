@@ -1,0 +1,136 @@
+.movie__name {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 16px 0 17px;
+}
+
+.movie__duration {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8b8b8b;
+  margin: 0;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+.movie__card {
+  box-sizing: border-box;
+  margin: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.movie__image {
+  width: 100%;
+  aspect-ratio: 364/203;
+  float: left;
+}
+
+.movie__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.movie__like-button {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/like-button.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.movie__like-button:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.movie__like-button-active {
+  background-image: url("../../images/like-button-active.svg");
+}
+
+@media screen and (max-width: 1024px) {
+  .movie__info {
+    padding: 0 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie__name {
+    margin: 14px 0 15px;
+    width: 70%;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie__duration {
+    padding-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie__image {
+    aspect-ratio: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie__name {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 14px 0 14px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .movie__duration {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .movie__info {
+      padding-left: 14px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .movie__card:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .movie__image {
+    aspect-ratio: 300/168;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .movie__name {
+    margin: 14px 0 14px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .movie__card {
+    width: 300px;
+  }
+}

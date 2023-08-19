@@ -27,37 +27,6 @@ function AboutMe() {
             alt="Фото профиля"
           />
         </div>
-        <div className="about-me__portfolio">
-          <p className="about-me__portfolio-title">Портфолио</p>
-          <nav className="about-me__navigation">
-            <ul className="about-me__links">
-              <li className="about-me__element">
-                <p className="about-me__name-link">Статичный сайт</p>
-                <a
-                  className="about-me__element-link"
-                  href="https://practicum.yandex.ru/"
-                >↗
-                </a>
-              </li>
-              <li className="about-me__element">
-                <p className="about-me__name-link">Адаптивный сайт</p>
-                <a
-                  className="about-me__element-link"
-                  href="https://practicum.yandex.ru/"
-                >↗
-                </a>
-              </li>
-              <li className="about-me__element">
-                <p className="about-me__name-link">Одностраничное приложение</p>
-                <a
-                  className="about-me__element-link"
-                  href="https://practicum.yandex.ru/"
-                >↗
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
       </section>
     </>
   );

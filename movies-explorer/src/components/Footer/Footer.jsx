@@ -1,4 +1,5 @@
-import './Footer.css'
+import "./Footer.css";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -11,12 +12,12 @@ function Footer() {
           <p className="footer__copyright">© {currentYear}</p>
           <nav className="footer__navigation">
             <ul className="footer__links">
-              <li>
+              <li className="footer__links-item">
                 <a className="footer__link" href="https://practicum.yandex.ru/">
                   Яндекс.Практикум
                 </a>
               </li>
-              <li>
+              <li className="footer__links-item">
                 <a
                   className="footer__link"
                   href="https://github.com/roni10morello/movies-explorer-frontend"

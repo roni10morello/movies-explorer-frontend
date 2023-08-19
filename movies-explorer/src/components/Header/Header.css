@@ -1,10 +1,11 @@
 .header {
   display: flex;
 }
-/* .header__logo {
-  box-sizing: border-box;
-  aspect-ratio: 1/1;
-} */
+
+.header__logo:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
 
 .header__menu {
   display: flex;
@@ -21,6 +22,17 @@
   max-height: 38px;
 }
 
+.header__account-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.header__account-button {
+  background-color: transparent;
+  width: 32px;
+  aspect-ratio: 1/1;
+}
 .header__menu-link {
   font-family: "Inter";
   font-style: medium;
@@ -35,14 +47,34 @@
   background-color: #073042;
 }
 
+.header__menu-login {
+  background-color: #202020;
+}
+
 @media screen and (max-width: 768px) {
   .header__menu {
     padding: 18px 30px;
-    /* padding: 18px calc(30px + (70 - 30) * ((100vw - 320px)) / (1280 - 768)); */
   }
- }
+}
 
- /* .profile__info {
+@media screen and (max-width: 450px) {
+  .header__menu {
+    padding: 18px 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__account-button {
+    width: 26px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__account-icon {
+    padding-left: 10px;
+  }
+}
+/* .profile__info {
   color: #fff;
   margin-left: 30px;
   max-width: 336px;

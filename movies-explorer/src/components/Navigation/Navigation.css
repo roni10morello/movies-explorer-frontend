@@ -1,21 +1,93 @@
 .navigation {
-  padding-bottom: 3.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+.navigation__account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 44px;
+}
+
+.navigation__login-link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  padding-right: 16px;
+}
+
+.navigation__account-link {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+.navigation__login-link:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+.navigation__account-link:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
 .navigation__link {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
   color: #ffffff;
   text-decoration: none;
   letter-spacing: 0;
+  padding-right: 30px;
+}
+
+.navigation__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
 }
 
 .navigation__link_type_login {
   border-radius: 3px;
   color: #000000;
   background-color: #3ddc84;
-  padding: 8.5px 20px;
-  margin-left: 30px;
+  padding: 8.5px 20.4px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__account {
+   display: none;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .navigation__link {
+    font-size: 10px;
+    padding-right: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navigation__link_type_login {
+    padding: 5.5px 12.35px;
+  }
 }

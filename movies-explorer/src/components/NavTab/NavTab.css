@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 40px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -21,8 +22,38 @@
   font-size: 13px;
   line-height: 16px;
   color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
-.navtab_element:not(:first-child) {
+.navtab__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+/* .navtab_element:not(:first-child) {
   margin-left: 40px;
+} */
+
+@media screen and (max-width: 450px) {
+  .navtab__list {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navtab__link {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navtab {
+    padding: 24px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navtab__element {
+    line-height: 16px;
+  }
 }

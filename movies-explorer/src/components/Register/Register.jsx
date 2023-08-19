@@ -1,17 +1,36 @@
 import React from "react";
 import AuthForm from "../AuthForm/AuthForm";
 
-
 function Register() {
-
   return (
     <AuthForm
       name="register"
       title="Добро пожаловать!"
       textButton="Зарегистрироваться"
       textLabel="Уже зарегистрированы?"
-      textLink={"Войти"}
+      textLink="Войти"
+      link="/signin"
     >
+      <label className="form__input-label" for="name">
+        Имя
+      </label>
+      <input
+        className="form__input form__input_form_authorize"
+        type="text"
+        id="name"
+        name="name"
+        minLength="2"
+        maxLength="40"
+        required
+        autoComplete="off"
+      />
+      <span
+        id="name-error"
+        className="form__error form__error_visible form__error_name_error"
+      ></span>
+      <label className="form__input-label" for="email">
+        E-mail
+      </label>
       <input
         className="form__input form__input_form_authorize"
         type="email"
@@ -20,13 +39,15 @@ function Register() {
         minLength="2"
         maxLength="40"
         required
-        placeholder="Email"
         autoComplete="off"
       />
       <span
         id="email-error"
         className="form__error form__error_visible form__error_email_error"
       ></span>
+      <label className="form__input-label" for="password">
+        Пароль
+      </label>
       <input
         className="form__input form__input_form_authorize"
         type="password"
@@ -34,7 +55,6 @@ function Register() {
         id="password"
         minLength="4"
         maxLength="16"
-        placeholder="Пароль"
         required
         autoComplete="off"
       />
@@ -46,4 +66,3 @@ function Register() {
   );
 }
 export default Register;
-
