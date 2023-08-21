@@ -6,32 +6,34 @@ function Portfolio() {
       <p className="portfolio__title">Портфолио</p>
       <nav className="portfolio__navigation">
         <ul className="portfolio__links">
-          <a className="portfolio__link" href="https://practicum.yandex.ru/">
+          <a
+            className="portfolio__link"
+            href="https://practicum.yandex.ru/"
+            target="blank"
+          >
             <li className="portfolio__element">
               <p className="portfolio__name-link">Статичный сайт</p>
               <p className="portfolio__element-link">↗</p>
             </li>
           </a>
-          <a className="portfolio__link" href="https://practicum.yandex.ru/">
+          <a
+            className="portfolio__link"
+            href="https://practicum.yandex.ru/"
+            target="blank"
+          >
             <li className="portfolio__element">
               <p className="portfolio__name-link">Адаптивный сайт</p>
-              <p
-                className="portfolio__element-link"
-                href="https://practicum.yandex.ru/"
-              >
-                ↗
-              </p>
+              <p className="portfolio__element-link">↗</p>
             </li>
           </a>
-          <a className="portfolio__link" href="https://practicum.yandex.ru/">
+          <a
+            className="portfolio__link"
+            href="https://practicum.yandex.ru/"
+            target="blank"
+          >
             <li className="portfolio__element">
               <p className="portfolio__name-link">Одностраничное приложение</p>
-              <p
-                className="portfolio__element-link"
-                href="https://practicum.yandex.ru/"
-              >
-                ↗
-              </p>
+              <p className="portfolio__element-link">↗</p>
             </li>
           </a>
         </ul>

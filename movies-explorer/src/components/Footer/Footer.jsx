@@ -13,13 +13,18 @@ function Footer() {
           <nav className="footer__navigation">
             <ul className="footer__links">
               <li className="footer__links-item">
-                <a className="footer__link" href="https://practicum.yandex.ru/">
+                <a
+                  className="footer__link"
+                  href="https://practicum.yandex.ru/"
+                  target="blank"
+                >
                   Яндекс.Практикум
                 </a>
               </li>
               <li className="footer__links-item">
                 <a
                   className="footer__link"
+                  target="blank"
                   href="https://github.com/roni10morello/movies-explorer-frontend"
                 >
                   Github

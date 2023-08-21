@@ -71,7 +71,6 @@
   transition: opacity 0.5s ease;
 }
 
-
 @media screen and (max-width: 768px) {
   .about-me {
     padding: 90px 50px 0;
@@ -109,14 +108,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about-me__profile-pic  {
+  .about-me__profile-pic {
     margin-left: 50px;
     max-width: 255px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .about-me__container  {
+  .about-me__container {
     margin-bottom: 91px;
   }
 }
@@ -165,7 +164,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .about-me__profile-pic  {
+  .about-me__profile-pic {
     margin: 0 auto;
     max-width: 292px;
     height: 352px;
