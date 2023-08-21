@@ -2,6 +2,17 @@
   padding: 110px 70px 0;
 }
 
+.about-me__subtitle {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 23px;
+  letter-spacing: -1px;
+  line-height: 27px;
+}
+
 .about-me__container {
   display: flex;
   flex-direction: row;
@@ -152,6 +163,14 @@
 @media screen and (max-width: 450px) {
   .about-me {
     padding: 70px 14px 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-me__subtitle {
+    font-size: 18px;
+    padding-bottom: 28px;
+    line-height: 22px;
   }
 }
 

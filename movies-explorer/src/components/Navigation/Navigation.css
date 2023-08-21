@@ -91,3 +91,27 @@
     padding: 5.5px 12.35px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .navigation__account-button {
+    width: 26px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navigation__account-icon {
+    padding-left: 10px;
+  }
+}
+
+.navigation__account-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.navigation__account-button {
+  background-color: transparent;
+  width: 32px;
+  aspect-ratio: 1/1;
+}

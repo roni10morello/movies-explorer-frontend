@@ -1,20 +1,17 @@
 import "./AuthForm.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/header_logo.svg";
+import LogoHeader from "../Header/LogoHeader/LogoHeader";
 
 function AuthForm(props) {
   return (
     <>
       <div className="authorize">
         <div className="authorize__container">
-          <Link to="/" className="header__homepagelink">
-            <img className="header__logo" src={logo} alt="Логотип" />
-          </Link>
+          <LogoHeader />
           <h3 className="authorize__title">{props.title}</h3>
           <form
             className={`form form_type_auth form_type_${props.name}`}
             name={`form-type_${props.name}`}
-            noValidate
             onSubmit={props.onSubmit}
           >
             {props.children}

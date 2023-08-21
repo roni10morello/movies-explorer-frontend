@@ -1,4 +1,4 @@
-.movie__name {
+.movie-card__name {
   font-family: "Inter";
   font-weight: 400;
   font-size: 13px;
@@ -7,7 +7,7 @@
   margin: 16px 0 17px;
 }
 
-.movie__duration {
+.movie-card__duration {
   font-family: "Inter";
   font-weight: 400;
   font-size: 11px;
@@ -18,7 +18,7 @@
   padding-bottom: 16px;
 }
 
-.movie__card {
+.movie-card {
   box-sizing: border-box;
   margin: 0;
   aspect-ratio: auto;
@@ -26,15 +26,16 @@
   border-radius: 6px;
   white-space: nowrap;
   overflow: hidden;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
 }
 
-.movie__image {
+.movie-card__image {
   width: 100%;
   aspect-ratio: 364/203;
   float: left;
 }
 
-.movie__info {
+.movie-card__info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,7 +43,7 @@
   padding: 0 16px;
 }
 
-.movie__like-button {
+.movie-card__like-button {
   width: 30px;
   height: 30px;
   background-image: url("../../images/like-button.svg");
@@ -53,23 +54,23 @@
   padding: 0;
 }
 
-.movie__like-button:hover {
+.movie-card__like-button:hover {
   opacity: 0.8;
   transition: opacity 0.5s ease;
 }
 
-.movie__like-button-active {
+.movie-card__like-button-active {
   background-image: url("../../images/like-button-active.svg");
 }
 
 @media screen and (max-width: 1024px) {
-  .movie__info {
+  .movie-card__info {
     padding: 0 14px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .movie__name {
+  .movie-card__name {
     margin: 14px 0 15px;
     width: 70%;
     white-space: normal;
@@ -77,33 +78,33 @@
 }
 
 @media screen and (max-width: 768px) {
-  .movie__duration {
+  .movie-card__duration {
     padding-bottom: 14px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .movie__image {
+  .movie-card__image {
     aspect-ratio: auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .movie__name {
+  .movie-card__name {
     font-size: 12px;
     line-height: 15px;
     margin: 14px 0 14px;
   }
 
   @media screen and (max-width: 600px) {
-    .movie__duration {
+    .movie-card__duration {
       font-size: 10px;
       line-height: 12px;
     }
   }
 
   @media screen and (max-width: 600px) {
-    .movie__info {
+    .movie-card__info {
       padding-left: 14px;
       padding-right: 10px;
     }
@@ -111,26 +112,26 @@
 }
 
 @media screen and (max-width: 450px) {
-  .movie__card:not(:last-of-type) {
+  .movie-card:not(:last-of-type) {
     margin-bottom: 14px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .movie__image {
+  .movie-card__image {
     aspect-ratio: 300/168;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .movie__name {
+  .movie-card__name {
     margin: 14px 0 14px;
     white-space: nowrap;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .movie__card {
+  .movie-card {
     width: 300px;
   }
 }

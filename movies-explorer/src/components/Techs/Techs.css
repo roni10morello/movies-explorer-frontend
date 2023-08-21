@@ -3,6 +3,17 @@
   padding: 100px 70px 0;
 }
 
+.techs__title {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 23px;
+  letter-spacing: -1px;
+  line-height: 27px;
+}
+
 .techs__subtitle {
   font-family: "Inter";
   font-style: medium;
@@ -143,5 +154,13 @@
     margin-bottom: 70px;
     justify-content: flex-start;
     max-width: 178px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__title {
+    font-size: 18px;
+    padding-bottom: 28px;
+    line-height: 22px;
   }
 }

@@ -3,6 +3,7 @@ import logo from "../../images/header_logo.svg";
 import "./Header.css";
 import Navigation from "../Navigation/Navigation";
 import SideMenu from "../SideMenu/SideMenu";
+import LogoHeader from "./LogoHeader/LogoHeader";
 
 function Header({ isLogin }) {
   return (
@@ -11,9 +12,7 @@ function Header({ isLogin }) {
         <>
           <header className="header">
             <nav className="header__menu header__menu-promo">
-              <Link to="/" className="header__homepagelink">
-                <img className="header__logo" src={logo} alt="Логотип" />
-              </Link>
+              <LogoHeader />
               <Navigation isLogin={isLogin} />
             </nav>
           </header>
@@ -22,9 +21,7 @@ function Header({ isLogin }) {
         <>
           <header className="header">
             <nav className="header__menu header__menu-login">
-              <Link to="/" className="header__homepagelink ">
-                <img className="header__logo" src={logo} alt="Логотип" />
-              </Link>
+              <LogoHeader />
               <Navigation isLogin={isLogin} />
               <SideMenu />
             </nav>

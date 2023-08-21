@@ -10,12 +10,7 @@ function SideMenu() {
     setIsOpen(!isOpen);
   }
   return (
-    <section className="side__menu">
-      {/* <button
-        className="side-menu__button"
-        type="submit"
-        onClick={MenuToggle}
-      ></button> */}
+    <section className="side-menu">
       <button
         className={`side-menu__button side-menu__button_type_${
           !isOpen ? "active" : "close"
@@ -24,10 +19,10 @@ function SideMenu() {
         onClick={MenuToggle}
       ></button>
       <nav className={`side-menu__navigation ${isOpen ? "open" : ""}`}>
-        <ul className="side-menu__navigation-list">
-          <div className="side-menu__navigation-links">
+        <div className="side-menu__navigation-list">
+          <ul className="side-menu__navigation-links">
             <li className="side-menu__navigation-item">
-              <Link to="/movies" className="side-menu__navigation-link">
+              <Link to="/" className="side-menu__navigation-link">
                 Главная
               </Link>
             </li>
@@ -37,28 +32,25 @@ function SideMenu() {
               </Link>
             </li>
             <li className="side-menu__navigation-item">
-              <Link to="/movies" className="side-menu__navigation-link">
+              <Link to="/saved-movies" className="side-menu__navigation-link">
                 Сохранённые фильмы
               </Link>
             </li>
-          </div>
-
-          <li className="side-menu__navigation-item">
+          </ul>
             <Link
               to="/profile "
-              className="navigation__login-link navigation__account-link "
+              className="side-menu__login-link side-menu__account-link "
             >
               Аккаунт
-              <div className="header__account-icon">
+              <div className="side-menu__account-icon">
                 <img
-                  className="header__account-button"
+                  className="side-menu__account-button"
                   src={profileButton}
                   alt="Кнопка Аккаунт"
                 />
               </div>
             </Link>
-          </li>
-        </ul>
+        </div>
       </nav>
     </section>
   );

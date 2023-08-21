@@ -4,7 +4,7 @@ import profileButton from "../../images/login-btn.svg";
 
 function Navigation({ isLogin }) {
   return !isLogin ? (
-    <div className="navigation">
+    <nav className="navigation">
       <Link to="/signup" className="navigation__link">
         Регистрация
       </Link>
@@ -14,9 +14,9 @@ function Navigation({ isLogin }) {
       >
         Войти
       </Link>
-    </div>
+    </nav>
   ) : (
-    <div className="navigation__account">
+    <nav className="navigation__account">
       <div className="navigation__account-links">
         <Link to="/movies" className="navigation__login-link">
           Фильмы
@@ -30,15 +30,15 @@ function Navigation({ isLogin }) {
         className="navigation__login-link navigation__account-link "
       >
         Аккаунт
-        <div className="header__account-icon">
+        <div className="navigation__account-icon">
           <img
-            className="header__account-button"
+            className="navigation__account-button"
             src={profileButton}
             alt="Кнопка Аккаунт"
           />
         </div>
       </Link>
-    </div>
+    </nav>
   );
 }
 

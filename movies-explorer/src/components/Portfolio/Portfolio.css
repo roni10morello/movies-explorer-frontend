@@ -30,6 +30,9 @@
 
 .portfolio__link {
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .portfolio__name-link {
@@ -43,21 +46,25 @@
   letter-spacing: -1.2px;
 }
 
-.portfolio__element {
-  display: flex;
+/* .portfolio__element {
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
+  justify-content: space-between; */
+
 
 /* .portfolio__element:not(:first-child) {
   margin-top: 20px;
-} */
+} */ 
 
 .portfolio__name-link:not(:last-child) {
   margin-bottom: 19px;
 }
 
-.portfolio__link:not(:last-child) {
+/* .portfolio__link:not(:last-child) {
+  border-bottom: 1px solid rgb(66, 66, 66);
+} */
+
+.portfolio__element:not(:last-child) {
   border-bottom: 1px solid rgb(66, 66, 66);
 }
 

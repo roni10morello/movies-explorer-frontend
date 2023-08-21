@@ -25,13 +25,4 @@ function FilterCheckbox() {
 
 export default FilterCheckbox;
 
-{
-  /* <button
-        className={`side-menu__button side-menu__button_type_${
-          !isOpen ? "active" : "close"
-        }`}
-        type="submit"
-        onClick={MenuToggle}
-      ></button>
-      <nav className={`side-menu__navigation ${isOpen ? "open" : ""}`}></nav> */
-}
+

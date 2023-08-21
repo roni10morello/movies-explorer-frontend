@@ -1,10 +1,7 @@
 .header {
   display: flex;
-}
-
-.header__logo:hover {
-  opacity: 0.8;
-  transition: opacity 0.5s ease;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .header__menu {
@@ -15,11 +12,6 @@
   margin: 0;
   padding: 18px 70px;
   justify-content: space-between;
-}
-
-.header__homepagelink {
-  margin: 0;
-  max-height: 38px;
 }
 
 .header__account-icon {

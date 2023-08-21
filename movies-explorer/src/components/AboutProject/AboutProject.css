@@ -3,6 +3,17 @@
   padding: 110px 70px;
 }
 
+.about-project__subtitle {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 23px;
+  letter-spacing: -1px;
+  line-height: 27px;
+}
+
 .about-project__container {
   display: flex;
   flex-direction: row;
@@ -19,9 +30,6 @@
   max-width: 550px;
 }
 
-/* .about-project__container-info:not(:last-child) {
-  margin-right: 30px;
-} */
 
 .about-project__container-subtitle {
   font-family: "Inter";
@@ -141,6 +149,14 @@
 @media screen and (max-width: 630px) {
   .about-project {
     padding: 70px 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-project__subtitle {
+    font-size: 18px;
+    padding-bottom: 28px;
+    line-height: 22px;
   }
 }
 

@@ -2,30 +2,10 @@
   min-width: 320px;
   max-width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   background-color: #202020;
-}
-
-.project__subtitle {
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 22px;
-  color: #ffffff;
-  margin: 0;
-  padding-bottom: 23px;
-  letter-spacing: -1px;
-  line-height: 27px;
-}
-
-@media screen and (max-width: 450px) {
-  .project__subtitle {
-    font-size: 18px;
-    padding-bottom: 28px;
-    line-height: 22px;
-  }
 }

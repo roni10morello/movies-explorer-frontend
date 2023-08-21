@@ -52,6 +52,10 @@
   padding-bottom: 181px;
 }
 
+.form__input:focus {
+  outline: 2px solid #EE3465;
+}
+
 .form_type_register {
   padding-bottom: 93px;
 }

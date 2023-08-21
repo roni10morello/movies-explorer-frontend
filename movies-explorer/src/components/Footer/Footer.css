@@ -1,6 +1,8 @@
 .footer {
   padding: 0 70px 20px;
+  margin: 0 auto;
   margin-top: 60px;
+  max-width: 1280px;
 }
 
 .footer__title {
