@@ -53,18 +53,17 @@
 }
 
 .form__input:focus {
-  outline: 2px solid #EE3465;
+  outline: 2px solid #ee3465;
 }
 
 .form_type_register {
-  padding-bottom: 93px;
+  padding-bottom: 73px;
 }
 
 .form__button-save {
   box-sizing: border-box;
   min-width: 396px;
   min-height: 45px;
-  background: #4285f4;
   cursor: pointer;
   border: none;
   border-radius: 3px;
@@ -88,6 +87,10 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.form__button-save_enable {
+  background: #4285f4;
+}
+
 .form__input {
   box-sizing: border-box;
   font-weight: 400;
@@ -103,9 +106,9 @@
   outline: none;
 }
 
-.form__input:not(:last-of-type) {
+/* .form__input:not(:last-of-type) {
   margin-bottom: 20px;
-}
+} */
 
 .form__input-label {
   margin-bottom: 10px;
@@ -113,6 +116,20 @@
   font-weight: 400;
   font-size: 10px;
   color: #8b8b8b;
+}
+
+.form__error {
+  display: block;
+  height: 10px;
+  padding-top: 10px;
+}
+
+.form__error_visible {
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 10px;
+  font-size: 10px;
+  color: #ee3465;
 }
 
 @media screen and (max-width: 768px) {
@@ -171,7 +188,6 @@
     padding-bottom: 267px;
   }
 }
-
 
 @media screen and (max-width: 450px) {
   .authorize__text-label {
