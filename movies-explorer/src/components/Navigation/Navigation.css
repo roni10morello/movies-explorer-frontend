@@ -112,6 +112,7 @@
 
 .navigation__account-button {
   background-color: transparent;
+  border-radius: 100%;
   width: 32px;
   aspect-ratio: 1/1;
 }

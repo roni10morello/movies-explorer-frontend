@@ -25,16 +25,21 @@ function Profile({ onUpdateUser, onSignOut }) {
     setValues(currentUser);
   }, [setValues, currentUser]);
 
+  useEffect(() => {
+    if (currentUser) {
+      resetForm(currentUser);
+    }
+  }, [currentUser, resetForm]);
+
   function handleSubmit(event) {
     event.preventDefault();
     onUpdateUser(values.name, values.email);
     setIsEditProfile(false);
-    resetForm();
+    //resetForm();
   }
 
   return (
     <>
-      <Header isLogin={true} />
       <section className="profile">
         <h2 className="profile__title">Привет, {currentUser.name}!</h2>
         <form
@@ -42,7 +47,6 @@ function Profile({ onUpdateUser, onSignOut }) {
           name="profile"
           onSubmit={handleSubmit}
           id="profile"
-          //isvalid={isvalid}
         >
           <div className="profile__info">
             <label className="profile__input-label">Имя</label>
@@ -78,6 +82,7 @@ function Profile({ onUpdateUser, onSignOut }) {
               minLength="2"
               maxLength="40"
               required
+              pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
               autoComplete="off"
               disabled={!isEditProfile}
               onChange={handleChange}

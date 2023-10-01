@@ -5,6 +5,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { useState, useEffect } from "react";
 import moviesApi from "../../utils/MoviesApi";
+import { DURATION } from "../../utils/constants";
 
 function Movies({ onLikeClick, onDeleteLikeClick, savedMovieList }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +18,7 @@ function Movies({ onLikeClick, onDeleteLikeClick, savedMovieList }) {
   const [notFound, setNotFound] = useState(false);
 
   function filterDuration(movies) {
-    return movies.filter((movie) => movie.duration <= 40);
+    return movies.filter((movie) => movie.duration <= DURATION);
   }
 
   function handleShortFilm() {
@@ -113,7 +114,7 @@ function Movies({ onLikeClick, onDeleteLikeClick, savedMovieList }) {
 
   return (
     <>
-      <Header isLogin={true} />
+      {/* <Header isLogin={true} /> */}
       <main className="movies">
         <SearchForm
           SearchMovies={SearchMovies}

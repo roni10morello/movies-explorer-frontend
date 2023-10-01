@@ -5,7 +5,7 @@ import error_login from "../../images/error_login.svg";
 function InfoTooltip({ isOpen, onClose, isSuccess }) {
   const infoImage = isSuccess ? accepted_login : error_login;
   const infoText = isSuccess
-    ? "Вы успешно зарегестрировались!"
+    ? "Успех!"
     : "Что-то пошло не так! Попробуйте еще раз.";
 
   return (

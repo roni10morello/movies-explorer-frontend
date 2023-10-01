@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { useState, useEffect } from "react";
-//import Preloader from "../Preloader/Preloader";
+import { DURATION } from "../../utils/constants";
 
 function SavedMovies({ savedMovieList, onDeleteLikeClick }) {
   const [filterMovies, setFilterMovies] = useState(savedMovieList);
@@ -22,7 +22,7 @@ function SavedMovies({ savedMovieList, onDeleteLikeClick }) {
   }
 
   function filterDuration(movies) {
-    return movies.filter((movie) => movie.duration < 40);
+    return movies.filter((movie) => movie.duration < DURATION);
   }
 
   function moviesFilter(movies, query) {
@@ -39,9 +39,7 @@ function SavedMovies({ savedMovieList, onDeleteLikeClick }) {
 
   useEffect(() => {
     const moviesList = moviesFilter(savedMovieList, searchQuery);
-    setFilterMovies(
-      shortFilm ? filterDuration(moviesList) : moviesList
-    );
+    setFilterMovies(shortFilm ? filterDuration(moviesList) : moviesList);
   }, [savedMovieList, shortFilm, searchQuery]);
 
   useEffect(() => {
@@ -52,14 +50,9 @@ function SavedMovies({ savedMovieList, onDeleteLikeClick }) {
     }
   }, [filterMovies]);
 
- // const [isLoading, setIsLoading] = useState(true);
-
-  // setTimeout(() => {
-  //   setIsLoading(false);
-  // }, 500);
   return (
     <>
-      <Header isLogin={true} />
+      {/* <Header isLogin={true} /> */}
       <main className="saved-movies">
         <SearchForm
           SearchMovies={SearchMovies}

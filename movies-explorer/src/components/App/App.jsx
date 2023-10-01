@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 
 import mainApi from "../../utils/MainApi";
 import Main from "../Main/Main";
@@ -15,6 +15,7 @@ import Profile from "../Profile/Profile";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import Header from "../Header/Header";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -23,8 +24,10 @@ function App() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isInfoToolTipOpen, setIsInfoToolTipOpen] = useState(false);
 
+  const location = useLocation();
+  const path = location.pathname;
   const navigate = useNavigate();
-
+ 
   function handleSaveMovie(movie) {
     mainApi
       .createMovie(movie)
@@ -50,11 +53,14 @@ function App() {
       .updateProfile({ name: name, email: email })
       .then((user) => {
         setCurrentUser(user.data);
+        setIsSuccess(true);
+
       })
       .catch((err) => {
-        //setIsInfoToolTipOpen(true);
+        setIsSuccess(false);
         console.log(`ALLARM ${err}`);
-      });
+      })
+      .finally(() => setIsInfoToolTipOpen(true));
   }
 
   function handleLogin(email, password) {
@@ -79,7 +85,7 @@ function App() {
         setIsLogin(true);
         setIsSuccess(true);
         setCurrentUser(user);
-        navigate("/signin", { replace: true });
+        handleLogin(email, password);
       })
       .catch((err) => {
         setIsSuccess(false);
@@ -95,6 +101,7 @@ function App() {
       .then(() => {
         setIsLogin(false);
         localStorage.clear();
+        navigate("/", { replace: true });
       })
       .catch((err) => {
         setIsSuccess(false);
@@ -113,7 +120,8 @@ function App() {
         setIsLogin(true);
         setCurrentUser(user.data);
         localStorage.removeItem("allMovies");
-        navigate("/movies", { replace: true });
+        navigate(path);
+        //navigate("/movies", { replace: true });
       })
       .catch((err) => {
         console.log(`ALLARM ${err}`);
@@ -135,6 +143,8 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
+      {path === '/' || path === '/movies' || path === '/saved-movies' || path === '/profile' ?
+          <Header isLogin={isLogin} /> : ""}
         <Routes>
           <Route path="/" element={<Main />} />
 

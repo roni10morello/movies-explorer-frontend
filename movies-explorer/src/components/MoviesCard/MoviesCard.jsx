@@ -1,5 +1,5 @@
 import "./MoviesCard.css";
-import { MOVIE_URL } from "../../utils/constants";
+import { MOVIE_URL, HOUR } from "../../utils/constants";
 import { useLocation } from "react-router-dom";
 
 function MovieCard({
@@ -13,8 +13,8 @@ function MovieCard({
   const savedMoviesPage = location.pathname === "/saved-movies";
 
   function timeConversion(duration) {
-    const minutes = duration % 60;
-    const hours = Math.floor(duration / 60);
+    const minutes = duration % HOUR;
+    const hours = Math.floor(duration / HOUR);
 
     return `${hours}ч${minutes > 0 ? ` ${minutes}м` : ""}`;
   }

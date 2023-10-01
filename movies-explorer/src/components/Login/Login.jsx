@@ -1,9 +1,11 @@
 import React from "react";
 import AuthForm from "../AuthForm/AuthForm";
-// import { useForm } from "../../hooks/useForm";
+import { EMAIL_VALIDATION } from "../../utils/constants";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
 
 function Login({ onLogin }) {
+
+  
   const { values, handleChange, errors, isValid, resetForm } =
     useFormWithValidation();
 
@@ -34,6 +36,8 @@ function Login({ onLogin }) {
       link="/signup"
       onSubmit={handleSubmit}
       isValid={isValid}
+      
+      
     >
       <label className="form__input-label" htmlFor="email">
         E-mail
@@ -44,6 +48,7 @@ function Login({ onLogin }) {
         type="email"
         id="email"
         name="email"
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         minLength="2"
         maxLength="40"
         required

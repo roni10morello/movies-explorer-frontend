@@ -3,6 +3,16 @@ import "./MoviesCardList.css";
 import MovieCard from "../MoviesCard/MoviesCard";
 import { useLocation } from "react-router-dom";
 import Preloader from "../Preloader/Preloader";
+import {
+  DEKSTOP,
+  TAB,
+  MOBILE,
+  DEKSTOP_WIDTH,
+  TAB_WIDTH,
+  DEKSTOP_CARDS,
+  TAB_CARDS,
+  MOBILE_CARDS,
+} from "../../utils/constants";
 
 function MoviesCardList({
   movies,
@@ -24,12 +34,12 @@ function MoviesCardList({
 
   function shownCard() {
     const ScreenWidth = window.innerWidth;
-    if (ScreenWidth > 1024) {
-      setShownMovies(12);
-    } else if (ScreenWidth > 750) {
-      setShownMovies(8);
+    if (ScreenWidth > DEKSTOP_WIDTH) {
+      setShownMovies(DEKSTOP_CARDS);
+    } else if (ScreenWidth > TAB_WIDTH) {
+      setShownMovies(TAB_CARDS);
     } else {
-      setShownMovies(5);
+      setShownMovies(MOBILE_CARDS);
     }
   }
 
@@ -45,12 +55,12 @@ function MoviesCardList({
 
   function showMoreCard() {
     const ScreenWidth = window.innerWidth;
-    if (ScreenWidth > 1024) {
-      setShownMovies(shownMovies + 3);
-    } else if (ScreenWidth > 750) {
-      setShownMovies(shownMovies + 2);
+    if (ScreenWidth > DEKSTOP_WIDTH) {
+      setShownMovies(shownMovies + DEKSTOP);
+    } else if (ScreenWidth > TAB_WIDTH) {
+      setShownMovies(shownMovies + TAB);
     } else {
-      setShownMovies(shownMovies + 2);
+      setShownMovies(shownMovies + MOBILE);
     }
   }
 
@@ -58,7 +68,7 @@ function MoviesCardList({
     <section className="movies-cards">
       {isLoading && <Preloader />}
       {notFound && !isLoading && (
-         <span className="movies-cards__search-error">Ничего не найдено</span>
+        <span className="movies-cards__search-error">Ничего не найдено</span>
       )}
       {isRequestError && !isLoading && (
         <span className="movies-cards__search-error">Произошла ошибка</span>
