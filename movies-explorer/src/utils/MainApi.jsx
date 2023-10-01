@@ -121,8 +121,8 @@ class MainApi {
 }
 
 const options = {
-  //url: "https://api.morello.nomoredomains.xyz",
-  url: "http://localhost:4000",
+  url: "https://api.morello.nomoredomains.xyz",
+  //url: "http://localhost:4000",
 };
 
 const mainApi = new MainApi(options);
