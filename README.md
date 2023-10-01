@@ -1,8 +1,7 @@
 # movies-explorer-frontend
 
-## Ссылка на Frontend
+https://morello.nomoredomains.xyz
 
-morello.nomoredomains.xyz
 
 Макет dark-3
 
