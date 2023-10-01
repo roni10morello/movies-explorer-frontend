@@ -112,7 +112,6 @@ function App() {
       .then((user) => {
         setIsLogin(true);
         setCurrentUser(user.data);
-        localStorage.removeItem("allMovies");
         navigate("/movies", { replace: true });
       })
       .catch((err) => {

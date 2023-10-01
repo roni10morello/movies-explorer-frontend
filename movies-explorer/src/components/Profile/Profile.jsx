@@ -5,29 +5,31 @@ import Header from "../Header/Header";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
 
-function Profile({ onUpdateUser, onSignOut, }) {
-  const { values, handleChange, errors, isValid, setValues } =
+function Profile({ onUpdateUser, onSignOut }) {
+  const { values, handleChange, errors, isValid, setValues, resetForm } =
     useFormWithValidation();
 
   const currentUser = React.useContext(CurrentUserContext);
   const [isEditProfile, setIsEditProfile] = useState(false);
 
   function handleChangeProfile() {
-    // setIsEditProfile(true);
-    if (isEditProfile) {
+    if (!isEditProfile) {
       setIsEditProfile(false);
     } else {
       setIsEditProfile(true);
     }
   }
 
+
   useEffect(() => {
     setValues(currentUser);
   }, [setValues, currentUser]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     onUpdateUser(values.name, values.email);
+    setIsEditProfile(false);
+    resetForm();
   }
 
   return (
@@ -40,7 +42,7 @@ function Profile({ onUpdateUser, onSignOut, }) {
           name="profile"
           onSubmit={handleSubmit}
           id="profile"
-          isValid={isValid}
+          //isvalid={isvalid}
         >
           <div className="profile__info">
             <label className="profile__input-label">Имя</label>
@@ -54,16 +56,19 @@ function Profile({ onUpdateUser, onSignOut, }) {
               maxLength="40"
               required
               autoComplete="off"
+              disabled={!isEditProfile}
               onChange={handleChange}
             ></input>
           </div>
           <span
-        id="name-error"
-        className="profile__form-error profile__form-error_visible"
-      > {errors.name}</span>
+            id="name-error"
+            className="profile__form-error profile__form-error_visible"
+          >
+            {" "}
+            {errors.name}
+          </span>
           <div className="profile__info">
-            <label className="profile__input-label">E-mail
-            </label>
+            <label className="profile__input-label">E-mail</label>
             <input
               value={values.email || ""}
               className="profile__form-input"
@@ -74,13 +79,17 @@ function Profile({ onUpdateUser, onSignOut, }) {
               maxLength="40"
               required
               autoComplete="off"
+              disabled={!isEditProfile}
               onChange={handleChange}
             ></input>
           </div>
           <span
-        id="email-error"
-        className="profile__form-error profile__form-error_visible"
-      > {errors.email}</span>
+            id="email-error"
+            className="profile__form-error profile__form-error_visible"
+          >
+            {" "}
+            {errors.email}
+          </span>
         </form>
         {isEditProfile ? (
           <button
@@ -89,17 +98,18 @@ function Profile({ onUpdateUser, onSignOut, }) {
             }`}
             type="submit"
             form="profile"
-            disabled={!isValid}
-            onSubmit={handleSubmit}
-            onClick={handleChangeProfile}
+            disabled={
+              !isValid
+            }
+            onChange={handleChangeProfile}
           >
             Сохранить
           </button>
         ) : (
           <button
-            type="button"
+            //type="button"
             className="profile__form-button-edit"
-            onClick={handleChangeProfile}
+            onClick={() => setIsEditProfile(true)}
           >
             Редактировать
           </button>
