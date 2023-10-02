@@ -117,7 +117,7 @@
 }
 
 .profile__button-save_disabled {
-  background-color: F8F8F8;
+  background: F8F8F8;
   color: rgba(194, 194, 194, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }

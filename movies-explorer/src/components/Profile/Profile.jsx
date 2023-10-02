@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./Profile.css";
-import Header from "../Header/Header";
+//import Header from "../Header/Header";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
 
@@ -11,6 +11,7 @@ function Profile({ onUpdateUser, onSignOut }) {
 
   const currentUser = React.useContext(CurrentUserContext);
   const [isEditProfile, setIsEditProfile] = useState(false);
+  const [isUpdateOn, setIsUpdateOn] = useState(false);
 
   function handleChangeProfile() {
     if (!isEditProfile) {
@@ -20,6 +21,20 @@ function Profile({ onUpdateUser, onSignOut }) {
     }
   }
 
+  function checkValues() {
+    if (
+      currentUser.name === values.name &&
+      currentUser.email === values.email
+    ) {
+      setIsUpdateOn(false);
+    } else {
+      setIsUpdateOn(true);
+    }
+  }
+
+  useEffect(() => {
+    checkValues();
+  }, [handleChange]);
 
   useEffect(() => {
     setValues(currentUser);
@@ -99,20 +114,19 @@ function Profile({ onUpdateUser, onSignOut }) {
         {isEditProfile ? (
           <button
             className={`profile__button-save profile__button-save_${
-              isValid ? "enable" : "disable"
+              isValid && isUpdateOn ? "enable" : "disable"
             }`}
             type="submit"
             form="profile"
-            disabled={
-              !isValid
-            }
+            disabled={!isValid || !isUpdateOn}
             onChange={handleChangeProfile}
+            //disabled={isValid&&isEdit}
           >
             Сохранить
           </button>
         ) : (
           <button
-            //type="button"
+            type="button"
             className="profile__form-button-edit"
             onClick={() => setIsEditProfile(true)}
           >
