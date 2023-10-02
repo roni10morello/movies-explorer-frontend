@@ -1,6 +1,8 @@
 # movies-explorer-frontend
 
-## Ссылка на Frontend
+https://morello.nomoredomains.xyz
+
+https://github.com/roni10morello/movies-explorer-frontend/pull/2
 
 Макет dark-3
 

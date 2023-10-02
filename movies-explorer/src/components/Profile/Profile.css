@@ -23,7 +23,21 @@
 
 .profile__form {
   padding-top: 123px;
-  padding-bottom: 203px;
+  padding-bottom: 194px;
+}
+
+.profile__form-error {
+  display: block;
+  height: 10px;
+  text-align: right;
+}
+
+.profile__form-error_visible {
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 10px;
+  font-size: 10px;
+  color: #ee3465;
 }
 
 .profile__info {
@@ -35,7 +49,7 @@
 
 .profile__info:not(:last-of-type) {
   border-bottom: 1px solid #424242;
-  margin-bottom: 17px;
+  margin-bottom: 6px;
 }
 
 .profile__form-input {
@@ -80,6 +94,38 @@
   margin-bottom: 16px;
   padding: 0;
 }
+
+.profile__button-save {
+  box-sizing: border-box;
+  min-width: 396px;
+  min-height: 45px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto 16px;
+  padding: 0;
+}
+
+.profile__button-save:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.profile__button-save_disabled {
+  background: F8F8F8;
+  color: rgba(194, 194, 194, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.profile__button-save_enable {
+  background: #4285f4;
+}
+
 
 .profile__form-button-edit:hover {
   opacity: 0.7;
@@ -145,6 +191,13 @@
   }
  } 
 
+ @media screen and (max-width: 450px) {
+  .profile__button-save {
+    min-width: calc(260px + (396 - 260) * ((100vw - 320px)) / (768 - 320));
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+}
 
  @media screen and (max-width: 450px) {
   .profile__form-button-edit {

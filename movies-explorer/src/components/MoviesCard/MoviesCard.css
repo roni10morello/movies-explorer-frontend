@@ -28,6 +28,9 @@
   overflow: hidden;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
 }
+/* .movie-card:hover {
+  transform: scale(1.01);
+} */
 
 .movie-card__image {
   width: 100%;
@@ -61,6 +64,26 @@
 
 .movie-card__like-button-active {
   background-image: url("../../images/like-button-active.svg");
+}
+
+.movie-card__delete-button {
+  background-image: url("../../images/delete-movie.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 30px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.movie-card__delete-button:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.movie-card__trailer-link {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {

@@ -12,19 +12,21 @@ function AuthForm(props) {
           <form
             className={`form form_type_auth form_type_${props.name}`}
             name={`form-type_${props.name}`}
+            id={props.id}
             onSubmit={props.onSubmit}
           >
             {props.children}
           </form>
-          <Link to="/profile">
-            <button
-              className="form__button-save form__button-save_type_auth"
-              type="submit"
-            >
-              {props.textButton}
-            </button>
-          </Link>
-
+          <button
+            className={`form__button-save form__button-save_type_auth form__button-save_${
+              props.isValid ? "enable" : "disable"
+            }`}
+            type="submit"
+            form={props.id}
+            disabled={!props.isValid}
+          >
+            {props.textButton}
+          </button>
           <p className="authorize__text-label">
             {props.textLabel}
             <Link to={props.link} className="authorize__link-login">
